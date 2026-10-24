@@ -3,13 +3,12 @@ title: "Data Analytics by R and else"
 page-layout: full
 ---
 
-:::: {.columns}
-
+:::::: columns
 ::: {.column width="40%"}
 ![](images/home.jpeg)
 :::
 
-::: {.column width="60%"}
+:::: {.column width="60%"}
 # Welcome
 
 Hello! I'm Alireza Chamanzar, a passionate Data Analytics and AI enthusiast with a keen interest in unraveling the complexities of social policy and societal inequality.
@@ -23,4 +22,5 @@ Currently In Social policy field, I'm immersed in academic studies focused on po
 ::: social-links
 [![GitHub](images/github.webp){width="32" height="32"}](https://github.com/alirezach) [![LinkedIn](images/linkedin.webp){width="32" height="32"}](https://linkedin.com/in/alirezachamanzar) [![Mastodon](images/mastodon.png){width="32" height="32"}](https://masto.ai/@alirezach) [![X](images/x.webp){width="32" height="32"}](https://x.com/alirezach) [![Email](images/mail.webp){width="32" height="32"}](mailto:alirezach70@gmail.com) [![Blog](images/blog.png){width="32" height="32"}](/blog) [![Persian Blog](images/blog.png){width="32" height="32"}](/persian)
 :::
-:::
+::::
+::::::

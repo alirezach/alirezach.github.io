@@ -1,0 +1,48 @@
+# Brand definition shared by the English site and the Persian blog.
+# Colors match the CV palette (main: 1B3C73, accent: 40679E).
+meta:
+  name: Alireza Chamanzar
+  link:
+    home: https://alirezach.github.io
+    github: https://github.com/alirezach
+
+color:
+  palette:
+    main: "#1B3C73"
+    accent: "#40679E"
+    # Neutrals tuned for each mode
+    ink: "#1F2A3D"        # dark blue-gray text on light background
+    paper: "#FFFFFF"      # light mode background
+    ink-dark: "#E8EAED"   # light gray text on dark background
+    paper-dark: "#15202B" # dark mode background
+    muted-light: "#5A6B85"
+    muted-dark: "#9AA7B8"
+
+  foreground: ink
+  background: paper
+  primary: main
+  secondary: accent
+  light: paper
+  dark: paper-dark
+
+typography:
+  fonts:
+    - family: Vazirmatn
+      source: google
+      weight: [400, 700]
+    - family: Roboto
+      source: google
+      weight: [400, 500, 700]
+    - family: Roboto Mono
+      source: google
+      weight: [400, 700]
+
+  base:
+    family: Vazirmatn
+    line-height: 1.6
+  headings:
+    family: Vazirmatn
+    weight: 700
+  monospace:
+    family: Roboto Mono
+    size: 0.9em

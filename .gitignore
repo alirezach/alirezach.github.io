@@ -7,3 +7,7 @@
 /fa
 
 /.luarc.json
+
+**/*.quarto_ipynb
+
+/.posit/

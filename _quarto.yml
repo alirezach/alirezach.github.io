@@ -41,16 +41,19 @@ website:
 
 format:
   html:
+    # Light = stock sandstone using brand colors; Dark = darkly layered on sandstone
     theme:
       light: sandstone
-      dark: sandstone
+      dark: [sandstone, darkly]
     css: styles/english.scss
     toc: true
     code-link: true
     link-external-icon: true
     link-external-newwindow: true
     smooth-scroll: true
-    highlight-style: gruvbox
+    highlight-style:
+      light: pygments
+      dark: gruvbox
     df-print: kable
 
 editor: visual
