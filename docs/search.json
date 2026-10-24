@@ -11,7 +11,7 @@
     "href": "blog.html",
     "title": "My journey to data analytic",
     "section": "",
-    "text": "Welcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\nblog post description (appears underneath the title in smaller text) which is included on the listing page\n\n\n\n\n\nJul 26, 2024\n\n\nAlireza Chamanzar\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome To My Blog\n\n\n\nnews\n\n\n\nblog post description (appears underneath the title in smaller text) which is included on the listing page\n\n\n\n\n\nJul 26, 2024\n\n\nAlireza Chamanzar\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -26,5 +26,12 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first and offcourse automate post in a My R+Quarto blog. Welcome!"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Alireza Chamanzar CV",
+    "section": "",
+    "text": "Summary\nWith over 3 years of experience in analyzing complex datasets, generating analytical reports, and providing actionable insights to improve organizational performance, I am proficient in using tools like R, SQL, and Excel to analyze and visualize data and identify key business trends. My successful background in various work environments, both in technical and sales roles, has given me a broader perspective beyond pure data analysis, allowing me to provide more comprehensive insights , allowing me to collaborate effectively with sales and marketing teams to optimize data-driven strategies. I also have strong data storytelling skills, translating insights into clear reports for key decision-makers.\n\n\nExperience\n\n\n\nEducation\n\n\n\nCertification\n\n\n\nTalks\n\n\n\nWriting and Publications\nI write and publish articles on data analysis on my ."
   }
 ]
