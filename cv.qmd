@@ -8,7 +8,7 @@ cvcolor:
   main: 1B3C73
   accent: 40679E
 include-in-header: cv-updated-date.tex
-jobtitle: Data Analyst | Data Story teller
+jobtitle: Data Analyst | Data Management & Statistical Analysis | Social Policy & Welfare Research | Data Literacy and AI Instructor
 sidebar:
   image: images/profile.jpg
   bullets:
