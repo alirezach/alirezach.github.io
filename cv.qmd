@@ -7,11 +7,12 @@ cvfont: Roboto #texlive fonts like raleway,fetamont,gillius,comfortaa
 cvcolor: 
   main: 1B3C73
   accent: 40679E
+include-in-header: cv-updated-date.tex
 jobtitle: Data Analyst | Data Story teller
 sidebar:
   image: images/profile.jpg
   bullets:
-    - Tehran, Majidiye
+    - Tehran
     - Completed Military Service
   sections:
     - name: Contact
@@ -34,36 +35,58 @@ sidebar:
       items:
         - text: Data Analysis
           exp: 
-            #text: "4+ yr."
             num: 0.9
+        - text: Statistical Analysis & Survey Data
+          exp: 
+            num: 0.85
         - text: Data Visualization
           exp: 
-            #text: "4+ years"
             num: 0.9
         - text: Data Storytelling
           exp: 
-            #text: "3 years"
-            num: 0.8
-        - text: R
+            num: 0.85
+        - text: Data Cleaning & Validation
           exp: 
-            #text: "4+ yrs."
+            num: 0.9
+        - text: Data Extraction (PDF & Web)
+          exp: 
+            num: 0.8
+        - text: Data Management & Quality
+          exp: 
+            num: 0.85
+        - text: Dashboard Development & Reporting
+          exp: 
+            num: 0.8
+        - text: R (tidyverse, data.table)
+          exp: 
             num: 0.9
         - text: SQL
           exp: 
-            #text: "2~ yrs."
-            num: 0.7
-        - text: python
+            num: 0.8
+        - text: Python (pandas)
           exp: 
-            #text: "1+ yrs."
-            num: 0.3
-        - text: Web Scraping
-          exp: 
-            #text: "2 yrs."
-            num: 0.7
-        - text: Network Analysis
-          exp: 
-            #text: "3 yr."
             num: 0.6
+        - text: Microsoft Excel (Power Query, PivotTables)
+          exp: 
+            num: 0.9
+        - text: Power BI
+          exp: 
+            num: 0.8
+        - text: Questionnaire Design
+          exp: 
+            num: 0.75
+        - text: Poverty & Welfare Analysis
+          exp: 
+            num: 0.85
+        - text: Market Analysis
+          exp: 
+            num: 0.75
+        - text: Training & Capacity Building
+          exp: 
+            num: 0.9
+        - text: Git
+          exp: 
+            num: 0.7
     - name: Tools
       items:
         - RStudio
@@ -72,9 +95,6 @@ sidebar:
         - Microsoft Excel
         - microsoft PowerPoint
         - Git/Github
-        - Looker studio
-        - Tableau
-        - Power BI
         - AI tools
     - name: Soft skills
       items:
@@ -88,6 +108,7 @@ sidebar:
       items:
         - English (fluent)
         - Persian (native)
+        - French (learning)
 execute: 
   echo: false
 ---
@@ -98,8 +119,19 @@ cvevents <- function(tbl, when, what, where, descr) {
 
     command_start <- "\\cvevent"
     tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    # Multi-line descriptions become LaTeX itemize lists; single lines stay inline
+    is_list <- grepl("\n", tbl[[descr]])
+    tbl[[descr]] <- ifelse(
+        is_list,
+        paste0(
+            "\\begin{itemize}[itemsep=1pt, parsep=0pt, topsep=2pt, leftmargin=1.2em]\n",
+            gsub("\n", "\n  \\\\item ", paste0("\\item ", tbl[[descr]])),
+            "\n\\end{itemize}"
+        ),
+        tbl[[descr]]
+    )
     res <- paste0(
-        command_start, "{", tbl[[when]], "}", 
+        command_start, "{", tbl[[when]], "}",
         "{", tbl[[what]], "}",
         "{", tbl[[where]], "}",
         "{", tbl[[descr]], "}"
@@ -122,7 +154,7 @@ cvproj <- function(tbl,what,role,items){
 
 # Summary
 
-With over 3 years of experience in analyzing complex datasets, generating analytical reports, and providing actionable insights to improve organizational performance, I am proficient in using tools like R, SQL, and Excel to analyze and visualize data and identify key business trends. My successful background in various work environments, both in technical and sales roles, has given me a broader perspective beyond pure data analysis, allowing me to provide more comprehensive insights , allowing me to collaborate effectively with sales and marketing teams to optimize data-driven strategies. I also have strong data storytelling skills, translating insights into clear reports for key decision-makers.
+Data analyst and social policy researcher working with quantitative data on welfare, poverty, markets and public services in Iran since 2018. I collect, clean, validate and analyse datasets from surveys, administrative records and national statistics, and turn them into dashboards, reports and data stories for decision-makers. This includes leading a data literacy course for NGOs and organising a project-based workshop on Household Income and Expenditure Survey data. Skilled in R (tidyverse, data.table), Python, SQL and advanced Excel, with dashboards in R or with other tools. I hold an MA in Social Policy from Allameh Tabataba'i University and teach data literacy, data management and applied AI to analysts, journalists and organisational staff. Fluent in Persian and English.
 
 # Experience
 
@@ -131,10 +163,12 @@ With over 3 years of experience in analyzing complex datasets, generating analyt
 #| output: asis
 tibble::tribble(
     ~role, ~company, ~dates, ~details,
-    "Data Analyst", "Department of Sales and Marketing\nAshkan tejarat Aram", "2023-2024", "I focused on analyzing sales trends, customer behavior, and market data to optimize strategies. My responsibilities included cleaning data, creating insightful reports, identifying growth opportunities, and providing data-driven recommendations to improve performance.",
-    "Founder and Editor in chief", "Engare.net (Online Magazine)", "2016~",
-    "(individual endeavor) Online wesite magazine in Social Science field (with over 30K social media followers)",
-    "University Breaks", "", "2016-2023", "I stepped away from my old professional field due to university,Of Course only to discover an exciting new path ahead.",
+    "Data Analyst", "Stats Minute", "Oct 2024~", "Support public-interest data projects on household welfare and poverty using national datasets such as HIES.\nReproducible cleaning pipelines in R, Python and SQL.\nRun descriptive and inferential statistical analyses and produce estimates using predefined models.\nApply data quality checks (completeness, consistency, duplicates, outliers) and document data workflows.",
+    "Instructor", "D-learn School", "Oct 2024~", "Design and deliver project-based courses on Excel, data management, data visualisation and workplace AI for analysts, journalists and administrative staff.\nDevelop curricula, exercise banks and teaching guides tailored to organisational needs.\nLead instructor of \"Data Literacy for Non-profit Organisations\" with the Moin Charity Institute (Dec 2024): designed and taught the full 12-hour programme on data literacy, data collection and management, Excel analysis and AI for NGO staff.\nLead organiser and facilitator of a one-day HIES-based data analysis workshop with the Iranian Sociological Association, University of Tehran (Dec 2025).\nAuthored the online course \"Data Processing with data.table in R\" (5 hours).\nDelivered webinars on data extraction from PDFs and websites (Jan 2025) and on moving from social science to data analysis (Jul 2024); guest trainer at the Lifeweb and Tabnak Data Journalism School (2024).",
+    "Editorial", "d-mag.ir", "Oct 2024~", "",
+    "Executive Team Member and Secretary", "d-award.ir", "Oct 2024~", "The \"D-Award\" is the first award in Iran dedicated to data analysis and storytelling within the public sphere for Persian-language works. Established to encourage data analysts, researchers, and journalists, the prize aims to enhance the quality of analytical content in the public sphere by promoting compelling and methodical analyses.",
+    "Data Analyst", "Department of Sales and Marketing\nAshkan tejarat Aram", "2023-2024", "Analysed sales, pricing and market data to identify trends, seasonality and growth opportunities.\nCleaned and consolidated sales datasets from multiple sources; produced recurring reports and visual summaries for management.\nDelivered data-driven recommendations to sales and marketing teams.",
+    "Founder and Editor in chief", "Engare.net (Online Magazine)", "2016~", "Founded and run a social science magazine with 30K+ social media followers.\nEdit and publish data-driven articles on welfare, inequality and social policy based on national and international statistics (SCI, ILO, World Bank).",
     "chief technology officer", "Bina co", "2012 - 2016", "I oversaw the integration of hardware and software for surveillance and alarm systems and conducted market research to expand services and products.",
     "Expert Technician", "Department of Network and Security\nBina co", "2010-2012", "My expertise involved software and hardware tasks, as well as configuring network infrastructure and software systems."
 ) |>
@@ -148,13 +182,14 @@ tibble::tribble(
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details,
-    "Master of Social policy", "Faculty of Social Sciences\n Allameh Tabataba’i University", "2020~", "",
+    "Master of Social policy", "Faculty of Social Sciences\n Allameh Tabataba’i University", "2020 - 2024", "",
     "Bachelore of Social Science", "Faculty of Social Sciences\n Allameh Tabataba’i University", "2016-2020", ""
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
 
 # Certification
+
 \begin{itemize}
   \item Google Data Analytics Professional | Coursera | April 2024 | \href{https://coursera.org/account/accomplishments/verify/RBA8YAMZQR4D}{link}
   \item Google Business Intelligence Specialization | Coursera | May 2024
@@ -165,19 +200,25 @@ tibble::tribble(
   \item Visualization with Excel | D-learn | August 2022 | \href{https://d-learn.ir/?cert_hash=8241398f60973c17}{link}
 \end{itemize}
 
-# Talks
+# Training and Workshops
+
 ```{r}
-#| label: talks
+#| label: training
 #| output: asis
 tibble::tribble(
     ~role, ~institution, ~dates, ~details,
-    "Data Journalism schools", "Lifeweb and Tabnak\nTeaching", "2024", "",
-    "Social science to Data Analytics", "D-learn School\nOnline Webinar", "2024", ""
+    "Lead instructor, \"Data Literacy for Non-profit Organisations\" (4 sessions x 3 hours, online)", "Dlearn in partnership with Dr.Mojtaba Moin Charity Institute", "Dec 2024", "Data literacy and data-driven culture, data collection and data management, analysis and reporting in Excel, and AI for daily NGO work; preceded by a free data literacy webinar for civil society. Recordings released free to NGOs in October 2025.",
+    "Lead organiser and facilitator, \"Data Analysis and its Applications in Social Sciences\"", "Iranian Sociological Association (Social Policy Group) and University of Tehran Faculty of Social Sciences", "Dec 2025", "",
+    "Webinar, \"Extracting Data from PDFs, Images and Websites without Programming\"", "D-Award 2025, with ATU Sociology Association", "Jan 2025", "",
+    "Webinar, \"From Social Sciences to Data Analysis\"", "Dlearn", "Jul 2024", "",
+    "Online course author, \"Data Processing with data.table in R\" (5 hours)", "Dlearn", "", "",
+    "Data journalism training", "Lifeweb and Tabnak Data Journalism School", "2024", ""
 ) |>
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
 
 # Writing and Publications
+
 I write and publish articles on data analysis on my \href{https://alirezach.github.io/persian/}{blog}.
 
 ```{r}
@@ -193,13 +234,8 @@ tibble::tribble(
     cvevents(when = "dates", what = "role", where = "institution", descr = "details")
 ```
 
+```{=html}
 <!-- # Awards
-```{r}
-#| label: awards
-#| output: asis
-tibble::tribble(
-    ~role, ~institution, ~dates, ~details,
-    "First place in the best social article", "Titer12(National festival)\nMinistry of Health, Treatment and Medical Education and Ministry of Science, Research and Technology", "2024", ""
-) |>
-    cvevents(when = "dates", what = "role", where = "institution", descr = "details")
-``` -->
+- First place in the best social article | Titer12 (National festival), Ministry of Health, Treatment and Medical Education and Ministry of Science, Research and Technology, 2024
+-->
+```
