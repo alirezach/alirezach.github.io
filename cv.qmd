@@ -8,7 +8,7 @@ cvcolor:
   main: 1B3C73
   accent: 40679E
 include-in-header: cv-updated-date.tex
-jobtitle: Data Analyst | Social Policy Researcher | Data and AI Instructor
+jobtitle: Data Analyst | Data and AI Instructor | Social Policy Researcher
 sidebar:
   image: images/profile.jpg
   bullets:
